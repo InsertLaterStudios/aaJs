@@ -29,19 +29,13 @@ exports.parseCookies = (req, badCookieCount_callback, badCookie_callack)=>{
 			
 			if 		(cookies_2[0] == "id" && cookies_2[1]) cookies.id = cookies_2[1]
 			else if (cookies_2[0] == "t" && cookies_2[1]) cookies.t = cookies_2[1]
-			else {
-				badCookie_callack(res)
-				return false
-			}
+			else badCookie_callack(res)
 		}
 		
 		if (cookies.id && cookies.t) return cookies
-		return false
 	}
-	else {
-		badCookieCount_callback(res)
-		return false
-	}
+	else badCookieCount_callback(res)
+	return false
 }
 exports.parseBody = (body, optionsArray)=>{
 	const inArray = body.split('&')//['name=value', ...,]
