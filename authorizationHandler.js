@@ -18,7 +18,8 @@ exports.randomString = (length)=>{
 
 
 
-exports.parseUrl = (req)=>{return req.url.slice(1).split('/')}
+exports.parseUrl = (req)=>{ return req.url.slice(1).split('/') }
+
 exports.parseCookies = (req, badCookieCount_callback, badCookie_callack)=>{
 	const cookie = req.headers.cookie
 	const cookies_1 = cookie.split('; ')
@@ -37,6 +38,7 @@ exports.parseCookies = (req, badCookieCount_callback, badCookie_callack)=>{
 	else badCookieCount_callback(res)
 	return false
 }
+
 exports.parseBody = (body, optionsArray)=>{
 	const inArray = body.split('&')//['name=value', ...,]
 	let outData = new Object

@@ -8,7 +8,7 @@ const SALT_ROUNDS = 12 // The higher the number, the more secure but slower it i
 
 
 
-const bcrypt = require('bcrypt')
+const bcrypt = require("bcrypt")
 
 
 
