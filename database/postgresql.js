@@ -27,8 +27,8 @@ const pool = new Pool({
 	password: process.env.PG_PASSWORD,
 	ssl: {
 		rejectUnauthorized: false,
-		key: readFileSync('/etc/postgresql/13/main/ssl/postgresql.key'),
-		cert: readFileSync('/etc/postgresql/13/main/ssl/postgresql.crt'),
+		key: readFileSync('../../../etc/postgresql/13/main/ssl/postgresql.key'),
+		cert: readFileSync('../../../etc/postgresql/13/main/ssl/postgresql.crt'),
 	},
 })
 pool.on("error", (err)=>{
