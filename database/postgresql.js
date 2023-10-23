@@ -20,6 +20,11 @@ const pool = new Pool({
 	user: process.env.PG_USER,
 	database: process.env.PG_DATABASE,
 	password: process.env.PG_PASSWORD,
+	ssl: {
+		rejectUnauthorized: false,
+		key: readFileSync('/etc/postgresql/13/main/ssl/postgresql.key').toString(),
+		cert: readFileSync('/etc/postgresql/13/main/ssl/postgresql.crt').toString(),
+	},
 })
 pool.on("error", (err)=>{
 	console.error("ERROR aaJs/database/postgresql.js pool.on error")
