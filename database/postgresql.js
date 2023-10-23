@@ -12,6 +12,11 @@ const DATABASE = {
 	database: process.env.PG_DATABASE,
 	password: process.env.PG_PASSWORD,
 }
+if (!DATABASE.host) console.log("aaJs/database/postgresql.js DATABASE.host")
+if (!DATABASE.port) console.log("aaJs/database/postgresql.js DATABASE.port")
+if (!DATABASE.user) console.log("aaJs/database/postgresql.js DATABASE.user")
+if (!DATABASE.database) console.log("aaJs/database/postgresql.js DATABASE.database")
+if (!DATABASE.password) console.log("aaJs/database/postgresql.js DATABASE.password")
 
 
 
