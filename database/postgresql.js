@@ -4,6 +4,11 @@
 
 
 
+// // DEPENDENCIES // //
+const { readFileSync } = require("fs")
+
+
+
 // // ENVIROMENT // //
 if (!process.env.PG_HOST) console.log("ERROR aaJs/database/postgresql.js process.env.PG_HOST")
 if (!process.env.PG_PORT) console.log("ERROR aaJs/database/postgresql.js process.env.PG_PORT")
@@ -22,8 +27,8 @@ const pool = new Pool({
 	password: process.env.PG_PASSWORD,
 	ssl: {
 		rejectUnauthorized: false,
-		key: readFileSync('/etc/postgresql/13/main/ssl/postgresql.key').toString(),
-		cert: readFileSync('/etc/postgresql/13/main/ssl/postgresql.crt').toString(),
+		key: readFileSync('/etc/postgresql/13/main/ssl/postgresql.key'),
+		cert: readFileSync('/etc/postgresql/13/main/ssl/postgresql.crt'),
 	},
 })
 pool.on("error", (err)=>{
