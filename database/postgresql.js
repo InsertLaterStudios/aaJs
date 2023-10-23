@@ -5,11 +5,11 @@
 
 
 // // ENVIROMENT // //
-if (!process.env.PG_HOST) console.log("ERROR aaJs/database/postgresql.js DATABASE.host")
-if (!process.env.PG_PORT) console.log("ERROR aaJs/database/postgresql.js DATABASE.port")
-if (!process.env.PG_USER) console.log("ERROR aaJs/database/postgresql.js DATABASE.user")
-if (!process.env.PG_DATABASE) console.log("ERROR aaJs/database/postgresql.js DATABASE.database")
-if (!process.env.PG_PASSWORD) console.log("ERROR aaJs/database/postgresql.js DATABASE.password")
+if (!process.env.PG_HOST) console.log("ERROR aaJs/database/postgresql.js process.env.PG_HOST")
+if (!process.env.PG_PORT) console.log("ERROR aaJs/database/postgresql.js process.env.PG_PORT")
+if (!process.env.PG_USER) console.log("ERROR aaJs/database/postgresql.js process.env.PG_USER")
+if (!process.env.PG_DATABASE) console.log("ERROR aaJs/database/postgresql.js process.env.PG_DATABASE")
+if (!process.env.PG_PASSWORD) console.log("ERROR aaJs/database/postgresql.js process.env.PG_PASSWORD")
 
 console.log(process.env.PG_HOST)
 
