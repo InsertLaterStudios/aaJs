@@ -16,12 +16,14 @@ const DATABASE = {
 
 
 const { Pool } = require("pg")
-exports.pool = new Pool(DATABASE)
+const pool = new Pool(DATABASE)
 pool.on("error", (err)=>{
 	console.error("ERROR aaJs/database/postgresql.js pool.on error")
 	console.error(err)
 	process.exit()
 })
+
+exports.pool = pool
 
 
 
