@@ -11,7 +11,7 @@ if (!process.env.PG_USER) console.log("ERROR aaJs/database/postgresql.js process
 if (!process.env.PG_DATABASE) console.log("ERROR aaJs/database/postgresql.js process.env.PG_DATABASE")
 if (!process.env.PG_PASSWORD) console.log("ERROR aaJs/database/postgresql.js process.env.PG_PASSWORD")
 
-console.log(process.env.PG_HOST)
+
 
 const { Pool } = require("pg")
 const pool = new Pool({
