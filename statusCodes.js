@@ -6,15 +6,15 @@
 
 exports.web = {
 	e400: (res)=> res.writeHead(400, {"Content-Type":"html/text"}).end("<p>400: Bad Request</p>"),
-	e401: (res)=> res.writeHead(401, {"Content-Type":"html/text"}).end("<p>Unauthorized</p>"),
+	e401: (res)=> res.writeHead(401, {"Content-Type":"html/text"}).end("<p>401: Unauthorized</p>"),
 	e404: (res)=> res.writeHead(404, {"Content-Type":"html/text"}).end("<p>404: Not Found</p>"),
 	e405: (res)=> res.writeHead(405, {"Content-Type":"html/text"}).end("<p>405: Method Not Allowed</p>"),
-	e408: (res)=> res.writeHead(408, {"Content-Type":"html/text"}).end("<p>Request Timeout</p>"),
+	e408: (res)=> res.writeHead(408, {"Content-Type":"html/text"}).end("<p>408: Request Timeout</p>"),
 	e413: (res)=> res.writeHead(413, {"Content-Type":"html/text"}).end("<p>413: Payload Too Large</p>"),
 	e414: (res)=> res.writeHead(414, {"Content-Type":"html/text"}).end("<p>414: URI Too Long</p>"),
-	e415: (res)=> res.writeHead(415, {"Content-Type":"html/text"}).end("<p>Unsupported Media Type</p>"),
-	e420: (res)=> res.writeHead(420, {"Content-Type":"html/text", "Set-Cookie":["id=deleted","t=deleted"]}).end("<p>Incorrect Cookie Count</p>"),
-	e421: (res)=> res.writeHead(421, {"Content-Type":"html/text", "Set-Cookie":["id=deleted","t=deleted"]}).end("<p>Incorrect Cookie</p>"),
+	e415: (res)=> res.writeHead(415, {"Content-Type":"html/text"}).end("<p>415: Unsupported Media Type</p>"),
+	e420: (res)=> res.writeHead(420, {"Content-Type":"html/text", "Set-Cookie":["id=deleted","t=deleted"]}).end("<p>420: Incorrect Cookie Count</p>"),
+	e421: (res)=> res.writeHead(421, {"Content-Type":"html/text", "Set-Cookie":["id=deleted","t=deleted"]}).end("<p>421: Incorrect Cookie</p>"),
 	e500: (res)=> res.writeHead(500, {"Content-Type":"html/text"}).end("<p>500: Internal Server Error</p>"),
 }
 exports.api = {

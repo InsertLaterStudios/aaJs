@@ -29,7 +29,7 @@ const pool = new Pool({
 pool.on("error", (err)=>{
 	console.error("ERROR aaJs/database/postgresql.js pool.on error")
 	console.error(err)
-	process.exit()
+	process.exit(1)
 })
 
 exports.pool = pool
